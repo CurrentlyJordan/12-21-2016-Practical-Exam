@@ -35,9 +35,9 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
         @Override
         public void onBindViewHolder(AnimalAdapter.AnimalViewHolder holder, int position) {
             Animal animal = animalList.get(position);
-            final String fragmentBackgroundColor = animalList.get(position).getBackground();
-            String animalName = animalList.get(position).getName();
-            String animalTextColor = animalList.get(position).getTextColor();
+            final String fragmentBackgroundColor = animal.getBackground();
+            String animalName = animal.getName();
+            String animalTextColor = animal.getTextColor();
             holder.animalTextView.setText(animalName);
             holder.animalTextView.setTextColor(Color.parseColor(animalTextColor));
             holder.itemView.setOnClickListener(new View.OnClickListener() {
